@@ -19,7 +19,7 @@ concurrency:
 jobs:
   review:
     if: github.event_name == 'workflow_dispatch' || github.event.pull_request.draft == false
-    uses: hej090224/ai-review-workflows/.github/workflows/code-review.yml@master
+    uses: hej090224/ai-review-workflows/.github/workflows/code-review.yml@main
     secrets:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
     with:
